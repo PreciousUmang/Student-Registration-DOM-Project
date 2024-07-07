@@ -1,16 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Precious Umang">
+    <meta name="description"
+        content="Student Registration System Designed using HTML, CSS, Javascript with DOM Manioulation.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, SRS, Student Registration System">
+    <!-- STYLE SHEET LINKED HERE -->
     <link rel="stylesheet" href="./includes/style.css">
     <title>SRS by Precious</title>
 </head>
+<!-- HEAD CLOSES HERE -->
 
 
 <body>
-    
+    <header>
+        <h1 id="mainHeading">Student Registration System</h1>
+    </header>
+
+    <main>
+
+        <section id="mainSection">
+
+            <!-- REGISTRATION FORM STARTS HERE -->
+            <section id="regForm">
+
+                <form action="">
+                    <legend>
+                        <h2>Please enter your details below: </h2>
+                    </legend>
+                    <fieldset>
+                        <div class="formItem">
+                            <Label for="studentName">Student Name :</Label><br>
+                            <input type="text" name="studentName" id="studentName">
+                        </div>
+                        <div class="formItem">
+                            <label for="studentID">Student ID :</label><br>
+                            <input type="text" name="studentID" id="studentID">
+                        </div>
+                        <div class="formItem">
+                            <label for="class">Class :</label><br>
+                            <input type="text" name="class" id="class">
+                        </div>
+                        <div class="formItem">
+                            <label for="rollNo">Roll No. :</label><br>
+                            <input type="number" name="rollNumber" id="rollNo">
+                        </div>
+                        <div class="formItem">
+                            <input type="button" value="submit">
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+
+            <!-- FORM ENTRIES START HERE -->
+            <section id="formEntry">
+                <div class="formEntryHeader">
+                    <h3>Name</h3>
+                </div>
+                <div class="formEntryHeader">
+                    <h3>ID</h3>
+                </div>
+                <div class="formEntryHeader">
+                    <h3>Class</h3>
+                </div>
+                <div class="formEntryHeader">
+                    <h3>Roll No.</h3>
+                </div>
+            </section>
+        </section>
+    </main>
+
+
+
     <script src="./includes/script.js">
     </script>
 </body>
+
 </html>

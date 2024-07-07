@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-image: url(/images/bg-image.jpg);
+}
+
+h1 {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+#mainSection {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#regForm {
+    margin: 0px auto;
+    width: 50%;
+}
+
+.formItem {
+    margin: 4px;
+}
+
+#formEntry {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+
+/* FOR SCREENS TILL 640px */
+@media screen and (max-width: 640px) {
+    #mainSection {
+        display: flex;
+        flex-direction: column;
+    }
+}
