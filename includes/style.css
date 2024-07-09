@@ -5,23 +5,51 @@
 
 body {
     box-sizing: border-box;
-    background-image: url(/images/bg-image.jpg);
+    background-image: linear-gradient(to top, #d626bb, #66158e);
+    font-family: Kanit;
+    color: bisque;
 }
 
-h1 {
-    margin: 2rem auto;
+header {
+    background-image: url(/images/bg-image.jpg);
+    border-bottom: 4px dashed bisque;
+}
+
+header h1 {
+    display: block;
+    margin: auto;
+    padding: 3rem 0;
     text-align: center;
+}
+
+h2 {
+    margin: 1rem 2rem;
+}
+
+h3 {
+    margin: 1rem auto;
+    font-weight: 500;
+}
+
+fieldset {
+    padding: 1rem 0;
+}
+
+.fa-solid {
+    padding: 0 1rem;
+    border-right: 5px solid bisque;
+    margin-right: 1rem;
 }
 
 #mainSection {
     display: flex;
     height: 100%;
     justify-content: space-around;
-    align-items: center;
+    margin: 0px 1rem;
 }
 
 #regForm {
-    margin: 0px auto;
+    margin: 0 1rem;
     width: 50%;
 }
 
@@ -29,12 +57,80 @@ h1 {
     margin: 4px;
 }
 
-#formEntry {
-    display: flex;
-    flex-direction: row;
+#entrySection {
     width: 50%;
+    padding-top: 2rem;
+    max-height: 600px;
+    overflow-y: scroll;
 }
 
+
+#entrySection .row1 {
+    border-left: 2px solid white;
+    border-right: 2px dotted whitesmoke;
+    border-bottom: 2px dashed white;
+}
+
+#entrySection .row2 {
+    border-right: 2px dotted whitesmoke;
+    border-bottom: 2px dashed white;
+}
+
+#entrySection .row3 {
+    border-right: 2px dotted whitesmoke;
+    border-bottom: 2px dashed white;
+}
+
+#entrySection .row4 {
+    border-right: 2px solid white;
+    border-bottom: 2px dashed white;
+}
+
+.displayDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+}
+
+.displayDiv p {
+    padding: 5px 5px;
+}
+
+#formEntry {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 2px solid white;
+}
+
+.inputField {
+    display: block;
+    height: 2rem;
+    width: 80%;
+    margin: 1rem auto;
+    padding: .5rem 1rem;
+    border-radius: 30px;
+
+}
+
+.buttonHolder {
+    display: flex;
+}
+
+.buttonHolder .button {
+    padding: 1rem 3rem;
+    margin: 1rem auto;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+#submit-btn {
+    background-color: #d626bb;
+}
+
+#reset-btn {
+    background-color: #66158e;
+}
 
 /* FOR SCREENS TILL 640px */
 @media screen and (max-width: 640px) {
