@@ -8,6 +8,22 @@
     <meta name="description"
         content="Student Registration System Designed using HTML, CSS, Javascript with DOM Manioulation.">
     <meta name="keywords" content="HTML, CSS, JavaScript, SRS, Student Registration System">
+
+    <!-- FAVICON HERE -->
+    <link rel="icon" type="image/x-icon" href="/images/favIcon.png">
+
+    <!-- "KANIT" FONT LINKED HERE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME EMBEDDED HERE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- STYLE SHEET LINKED HERE -->
     <link rel="stylesheet" href="./includes/style.css">
     <title>SRS by Precious</title>
@@ -21,54 +37,61 @@
     </header>
 
     <main>
-
+        <h2>Please enter your details below: </h2>
         <section id="mainSection">
 
             <!-- REGISTRATION FORM STARTS HERE -->
             <section id="regForm">
+                <form action="#" method="post" id="form">
 
-                <form action="">
-                    <legend>
-                        <h2>Please enter your details below: </h2>
-                    </legend>
                     <fieldset>
                         <div class="formItem">
-                            <Label for="studentName">Student Name :</Label><br>
-                            <input type="text" name="studentName" id="studentName">
+                            <Label for="studentName"><i class="fa-solid fa-trophy fa-beat-fade"
+                                    style="--fa-animation-duration: 2s;"></i>Student Name
+                                :</Label><br>
+                            <input type="text" name="studentName" id="studentName" class="inputField"
+                                placeholder="Enter Your Full Name" required>
                         </div>
                         <div class="formItem">
-                            <label for="studentID">Student ID :</label><br>
-                            <input type="text" name="studentID" id="studentID">
+                            <label for="studentID"><i class="fa-solid fa-id-card-clip fa-beat-fade"
+                                    style="--fa-animation-duration: 2s;"></i>Student ID
+                                :</label><br>
+                            <input type="text" name="studentID" id="studentID" class="inputField"
+                                placeholder="Enter Your 7-digit Student ID" minlength="7" maxlength="7" required>
                         </div>
                         <div class="formItem">
-                            <label for="class">Class :</label><br>
-                            <input type="text" name="class" id="class">
+                            <label for="studentEmail"><i class="fa-solid fa-envelope fa-beat-fade"
+                                    style="--fa-animation-duration: 2s;"></i>Email :</label><br>
+                            <input type="email" name="email" id="studentEmail" class="inputField"
+                                placeholder="Enter Your Email" required>
                         </div>
                         <div class="formItem">
-                            <label for="rollNo">Roll No. :</label><br>
-                            <input type="number" name="rollNumber" id="rollNo">
+                            <label for="studentContact"><i class="fa-solid fa-phone fa-beat-fade"
+                                    style="--fa-animation-duration: 2s;"></i>Contact No. :</label><br>
+                            <input type="tel" name="contactNumber" id="studentContact" class="inputField" minlength="10"
+                                maxlength="10" placeholder="Enter your Contact No." required>
                         </div>
-                        <div class="formItem">
-                            <input type="button" value="submit">
+                        <div class="buttonHolder">
+                            <input type="submit" class="button" value="Save & Register" id="submit-btn">
+                            <input type="button" class="button" value="Clear Form" id="reset-btn">
                         </div>
                     </fieldset>
                 </form>
             </section>
 
             <!-- FORM ENTRIES START HERE -->
-            <section id="formEntry">
-                <div class="formEntryHeader">
-                    <h3>Name</h3>
+            <section id="entrySection">
+                <h3 id="recordHeading">Registered Students : </h3>
+                <div class="displayDiv">
+                    <strong>Name</strong>
+                    <strong>ID</strong>
+                    <strong>Class</strong>
+                    <strong>Contact No.</strong>
                 </div>
-                <div class="formEntryHeader">
-                    <h3>ID</h3>
                 </div>
-                <div class="formEntryHeader">
-                    <h3>Class</h3>
-                </div>
-                <div class="formEntryHeader">
-                    <h3>Roll No.</h3>
-                </div>
+
+                <div class="entryTable"></div>
+
             </section>
         </section>
     </main>
