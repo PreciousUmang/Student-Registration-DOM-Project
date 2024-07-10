@@ -49,31 +49,37 @@
                             <Label for="studentName"><i class="fa-solid fa-trophy fa-beat-fade"
                                     style="--fa-animation-duration: 2s;"></i>Student Name
                                 :</Label><br>
-                            <input type="text" name="studentName" id="studentName" class="inputField"
-                                placeholder="Enter Your Full Name" required>
+                            <input type="text" name="studentName" id="studentName" class="inputField" maxlength="20"
+                                oninvalid="this.setCustomValidity('Enter Your Name Here')"
+                                oninput="this.setCustomValidity('')" placeholder="Enter Your Full Name" required>
                         </div>
                         <div class="formItem">
                             <label for="studentID"><i class="fa-solid fa-id-card-clip fa-beat-fade"
                                     style="--fa-animation-duration: 2s;"></i>Student ID
                                 :</label><br>
                             <input type="text" name="studentID" id="studentID" class="inputField"
-                                placeholder="Enter Your 7-digit Student ID" minlength="7" maxlength="7" required>
+                                oninvalid="this.setCustomValidity('Enter Your Student ID Here')"
+                                oninput="this.setCustomValidity('')" placeholder="Enter Your 7-digit Student ID"
+                                minlength="7" maxlength="7" required>
                         </div>
                         <div class="formItem">
                             <label for="studentEmail"><i class="fa-solid fa-envelope fa-beat-fade"
                                     style="--fa-animation-duration: 2s;"></i>Email :</label><br>
                             <input type="email" name="email" id="studentEmail" class="inputField"
-                                placeholder="Enter Your Email" required>
+                                oninvalid="this.setCustomValidity('Enter Your Email Here')"
+                                oninput="this.setCustomValidity('')" placeholder="Enter Your Email" required>
                         </div>
                         <div class="formItem">
                             <label for="studentContact"><i class="fa-solid fa-phone fa-beat-fade"
                                     style="--fa-animation-duration: 2s;"></i>Contact No. :</label><br>
                             <input type="tel" name="contactNumber" id="studentContact" class="inputField" minlength="10"
-                                maxlength="10" placeholder="Enter your Contact No." required>
+                                oninvalid="this.setCustomValidity('Enter Your Contact Number Here')"
+                                oninput="this.setCustomValidity('')" maxlength="10" placeholder="Enter your Contact No."
+                                required>
                         </div>
                         <div class="buttonHolder">
-                            <input type="submit" class="button" value="Save & Register" id="submit-btn">
-                            <input type="button" class="button" value="Clear Form" id="reset-btn">
+                            <input type="button" class="button" value="Clear Form" id="reset-btn"> <input type="submit"
+                                class="button" value="Save & Register" id="submit-btn">
                         </div>
                     </fieldset>
                 </form>
@@ -85,7 +91,7 @@
                 <div class="displayDiv">
                     <strong>Name</strong>
                     <strong>ID</strong>
-                    <strong>Class</strong>
+                    <strong>Email</strong>
                     <strong>Contact No.</strong>
                 </div>
                 </div>

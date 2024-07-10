@@ -8,6 +8,7 @@ body {
     background-image: linear-gradient(to top, #d626bb, #66158e);
     font-family: Kanit;
     color: bisque;
+    padding-bottom: 2rem;
 }
 
 header {
@@ -31,26 +32,25 @@ h3 {
     font-weight: 500;
 }
 
-fieldset {
-    padding: 1rem 0;
-}
-
-.fa-solid {
-    padding: 0 1rem;
-    border-right: 5px solid bisque;
-    margin-right: 1rem;
-}
 
 #mainSection {
     display: flex;
-    height: 100%;
     justify-content: space-around;
     margin: 0px 1rem;
 }
 
 #regForm {
-    margin: 0 1rem;
     width: 50%;
+}
+
+fieldset {
+    padding: 1rem 0;
+}
+
+fieldset .fa-solid {
+    padding: 0 1rem;
+    border-right: 5px solid bisque;
+    margin-right: 1rem;
 }
 
 .formItem {
@@ -60,39 +60,47 @@ fieldset {
 #entrySection {
     width: 50%;
     padding-top: 2rem;
-    max-height: 600px;
-    overflow-y: scroll;
-}
-
-
-#entrySection .row1 {
-    border-left: 2px solid white;
-    border-right: 2px dotted whitesmoke;
-    border-bottom: 2px dashed white;
-}
-
-#entrySection .row2 {
-    border-right: 2px dotted whitesmoke;
-    border-bottom: 2px dashed white;
-}
-
-#entrySection .row3 {
-    border-right: 2px dotted whitesmoke;
-    border-bottom: 2px dashed white;
-}
-
-#entrySection .row4 {
-    border-right: 2px solid white;
-    border-bottom: 2px dashed white;
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 .displayDiv {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-columns: 4fr 2fr 6fr 2fr 1fr 1fr;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 5px;
+    border-radius: 20px;
 }
+
 
 .displayDiv p {
     padding: 5px 5px;
+    border-bottom: 2px dashed whitesmoke;
+    background-color: white;
+    font-size: small;
+    color: #66158e;
+
+}
+
+.displayDiv .actionButton {
+    padding: 0px 5px;
+    margin-left: 0px;
+    border: none;
+    outline: none;
+}
+
+.displayDiv .edit-btn {
+    background-color: darkorange;
+    color: #66158e;
+}
+
+.displayDiv .delete-btn {
+    background-color: red;
+    color: #66158e;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
 }
 
 #formEntry {
@@ -106,12 +114,21 @@ fieldset {
 .inputField {
     display: block;
     height: 2rem;
-    width: 80%;
+    width: 70%;
     margin: 1rem auto;
     padding: .5rem 1rem;
     border-radius: 30px;
-
+    transition: all 200ms;
 }
+
+.inputField:active {
+    box-shadow: 0em 0em .5rem .5rem whitesmoke;
+}
+
+.inputField:focus {
+    box-shadow: 0em 0em 10px 2px rgb(255, 255, 255);
+}
+
 
 .buttonHolder {
     display: flex;
@@ -125,17 +142,48 @@ fieldset {
 }
 
 #submit-btn {
-    background-color: #d626bb;
+    background-color: #66158e;
+    color: bisque;
+    transition: all 200ms;
+}
+
+
+#submit-btn:hover,
+#submit-btn:focus,
+#submit-btn:active {
+    box-shadow: 0em 0em 2em .5em blueviolet;
+    scale: 110%;
 }
 
 #reset-btn {
-    background-color: #66158e;
+    background-color: #d626bb;
+    transition: all 200ms;
 }
 
-/* FOR SCREENS TILL 640px */
-@media screen and (max-width: 640px) {
+#reset-btn:hover,
+#reset-btn:active,
+#reset-btn:focus {
+    box-shadow: 0em 0em 2em .5em rgb(255, 40, 226);
+    scale: 110%;
+}
+
+/* FOR SCREENS TILL 800px */
+@media screen and (max-width: 800px) {
     #mainSection {
         display: flex;
         flex-direction: column;
+    }
+
+    #regForm {
+        width: 50%;
+    }
+
+    #entrySection {
+        width: 50%;
+
+    }
+
+    fieldset {
+        padding: 0 1rem;
     }
 }
