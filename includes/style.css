@@ -8,12 +8,16 @@ body {
     background-image: linear-gradient(to top, #d626bb, #66158e);
     font-family: Kanit;
     color: bisque;
-    padding-bottom: 2rem;
+
 }
 
 header {
     background-image: url(/images/bg-image.jpg);
     border-bottom: 4px dashed bisque;
+}
+
+main {
+    margin: 0px auto;
 }
 
 header h1 {
@@ -45,6 +49,7 @@ h3 {
 
 fieldset {
     padding: 1rem 0;
+    margin-bottom: 2rem;
 }
 
 fieldset .fa-solid {
@@ -59,47 +64,85 @@ fieldset .fa-solid {
 
 #entrySection {
     width: 50%;
-    padding-top: 2rem;
+    padding: 2rem 1rem;
     max-height: 400px;
     overflow-y: auto;
+    overflow-x: auto;
 }
 
-.displayDiv {
-    display: grid;
-    grid-template-columns: 4fr 2fr 6fr 2fr 1fr 1fr;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding-top: 5px;
-    border-radius: 20px;
+table {
+    width: 100%;
 }
 
+table thead {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #66158e;
+}
 
-.displayDiv p {
-    padding: 5px 5px;
-    border-bottom: 2px dashed whitesmoke;
-    background-color: white;
-    font-size: small;
+table thead td {
+    padding: .5rem 0rem;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+tr {
+    background-color: bisque;
+    border-radius: 10px;
     color: #66158e;
-
-}
-
-.displayDiv .actionButton {
-    padding: 0px 5px;
-    margin-left: 0px;
     border: none;
-    outline: none;
 }
 
-.displayDiv .edit-btn {
-    background-color: darkorange;
-    color: #66158e;
+tr td {
+    padding: 0px 10px;
 }
 
-.displayDiv .delete-btn {
-    background-color: red;
+.actionButton {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: none;
+
+}
+
+.edit-btn {
+    background-color: rgba(255, 140, 0, 0.5);
     color: #66158e;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    padding: 1rem;
+    margin: 0;
+    transition: all 200ms;
+}
+
+.edit-btn:hover,
+.edit-btn:active,
+.edit-btn:focus {
+    box-shadow: 0 0 .5rem .1rem darkorange;
+    scale: 95%;
+    color: darkorange;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.delete-btn {
+    background-color: rgba(255, 0, 0, 0.5);
+    color: #66158e;
+    padding: 1rem;
+    margin: 0;
+    transition: all 200ms;
+}
+
+.delete-btn:active,
+.delete-btn:hover,
+.delete-btn:focus {
+    box-shadow: 0 0 .5rem .1rem red;
+    scale: 95%;
+    color: red;
+    background-color: transparent;
+    cursor: pointer;
 
 }
 
@@ -117,8 +160,15 @@ fieldset .fa-solid {
     width: 70%;
     margin: 1rem auto;
     padding: .5rem 1rem;
-    border-radius: 30px;
+    border-radius: 20px;
     transition: all 200ms;
+    background-color: purple;
+    border: none;
+    color: aliceblue;
+}
+
+.inputField::placeholder {
+    color: bisque;
 }
 
 .inputField:active {
@@ -126,7 +176,7 @@ fieldset .fa-solid {
 }
 
 .inputField:focus {
-    box-shadow: 0em 0em 10px 2px rgb(255, 255, 255);
+    box-shadow: 0em 0em 10px 5px rgb(255, 255, 255);
 }
 
 
@@ -149,10 +199,10 @@ fieldset .fa-solid {
 
 
 #submit-btn:hover,
-#submit-btn:focus,
 #submit-btn:active {
     box-shadow: 0em 0em 2em .5em blueviolet;
     scale: 110%;
+    cursor: pointer;
 }
 
 #reset-btn {
@@ -161,10 +211,119 @@ fieldset .fa-solid {
 }
 
 #reset-btn:hover,
-#reset-btn:active,
-#reset-btn:focus {
+#reset-btn:active {
     box-shadow: 0em 0em 2em .5em rgb(255, 40, 226);
     scale: 110%;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #66158e;
+    padding: 1rem 0;
+}
+
+footer h3 {
+    padding: 0;
+    margin: 0;
+}
+
+footer .linksHolder {
+    padding-top: 1rem;
+}
+
+footer .linksHolder a {
+    display: block;
+    color: bisque;
+    text-decoration: none;
+    transition: all 200ms;
+    padding: 0rem;
+}
+
+footer .linksHolder a:hover,
+footer .linksHolder a:active {
+    background-color: bisque;
+    padding: .5rem 1rem;
+    color: #66158e;
+    text-decoration: underline;
+    border-top-right-radius: 20px;
+
+    border-bottom-left-radius: 20px;
+}
+
+footer .footerHead {
+    text-align: center;
+}
+
+footer .footerLinks {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .contactHolder {
+    display: flex;
+    align-items: start;
+    text-align: center;
+}
+
+footer .contactHolder .contactItem {
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+footer .contactLogo {
+    text-align: center;
+    margin-top: .5rem;
+    text-decoration: none;
+    border-radius: 50;
+    padding: 1rem;
+    background-color: bisque;
+    color: #66158e;
+    border-radius: 50px;
+    transition: all 200ms;
+}
+
+footer .contactLogo:hover {
+    scale: 120%;
+    background-color: #66158e;
+    color: bisque;
+    box-shadow: 0px 0px 2px 4px bisque;
+    box-shadow: inset;
+    transform: translateY(5px);
+}
+
+.newsletter {
+    margin: 1rem auto;
+}
+
+#newsletter {
+    width: 30%;
+    height: 2rem;
+    margin-top: .5rem;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    transition: all 200ms;
+}
+
+#newsButton {
+    padding: 1rem 3rem;
+    margin: auto 1rem;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #66158e;
+    color: bisque;
+    transition: all 200ms;
+}
+
+#newsButton:hover,
+#newsButton:active {
+    cursor: pointer;
+    scale: 110%;
+    background-color: bisque;
+    color: #66158e;
+    box-shadow: inset;
+    box-shadow: 0 0 .1rem .2rem #d626bb;
 }
 
 /* FOR SCREENS TILL 800px */
@@ -175,15 +334,28 @@ fieldset .fa-solid {
     }
 
     #regForm {
-        width: 50%;
+        width: 100%;
     }
 
     #entrySection {
-        width: 50%;
+        width: 100%;
 
     }
 
     fieldset {
         padding: 0 1rem;
     }
+}
+
+
+@media screen and (max-width: 500px) {
+    h2 {
+        margin: 1rem 2rem;
+    }
+
+    .buttonHolder {
+        display: flex;
+        flex-direction: column;
+    }
+
 }
