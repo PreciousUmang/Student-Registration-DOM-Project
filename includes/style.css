@@ -8,7 +8,6 @@ body {
     background-image: linear-gradient(to top, #d626bb, #66158e);
     font-family: Kanit;
     color: bisque;
-
 }
 
 header {
@@ -105,7 +104,6 @@ tr td {
     display: flex;
     justify-content: center;
     border: none;
-
 }
 
 .edit-btn {
@@ -126,7 +124,6 @@ tr td {
     cursor: pointer;
 }
 
-
 .delete-btn {
     background-color: rgba(255, 0, 0, 0.5);
     color: #66158e;
@@ -143,7 +140,6 @@ tr td {
     color: red;
     background-color: transparent;
     cursor: pointer;
-
 }
 
 #formEntry {
@@ -219,7 +215,7 @@ tr td {
 
 footer {
     background-color: #66158e;
-    padding: 1rem 0;
+    padding: 1rem .5rem;
 }
 
 footer h3 {
@@ -246,7 +242,6 @@ footer .linksHolder a:active {
     color: #66158e;
     text-decoration: underline;
     border-top-right-radius: 20px;
-
     border-bottom-left-radius: 20px;
 }
 
@@ -256,7 +251,7 @@ footer .footerHead {
 
 footer .footerLinks {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 footer .contactHolder {
@@ -331,6 +326,8 @@ footer .contactLogo:hover {
     #mainSection {
         display: flex;
         flex-direction: column;
+        padding: 0;
+        margin: 0;
     }
 
     #regForm {
@@ -339,14 +336,13 @@ footer .contactLogo:hover {
 
     #entrySection {
         width: 100%;
-
+        padding: 1rem;
     }
 
     fieldset {
         padding: 0 1rem;
     }
 }
-
 
 @media screen and (max-width: 500px) {
     h2 {
@@ -358,4 +354,8 @@ footer .contactLogo:hover {
         flex-direction: column;
     }
 
+    footer .footerLinks {
+        flex-flow: wrap;
+        width: 100vw;
+    }
 }

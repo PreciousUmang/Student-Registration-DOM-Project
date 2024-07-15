@@ -50,9 +50,11 @@ function saveData() {
     students.push(student);
     localStorage.setItem('students', JSON.stringify(students));
 
+   
+
     // 5. DISPLAY NEW STUDENT
     displayStudent(student);
-
+    alert(`Student details have been updated Successfully!`);
     // 6. FORM RESET
     form.reset();
 }
